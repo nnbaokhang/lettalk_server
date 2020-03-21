@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input id="name" autocomplete="off" /><button>Send</button>
+</form>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script>
+        $(function () {
+
+            $('form').submit(function (e) {
+                e.preventDefault();
+                document.cookie = "name=" + $('#name').val()
+                alert(document.cookie)
+            })
+         return false
+        })
+
+</script>
+
+</html>
